@@ -22,6 +22,7 @@ a{
     --padding-top:80px;
     --padding-bottom:80px;
     --transperant-color:rgb(25 200 250 / 60%);
+    --blue:#032f55;
 }
 .container{
     margin-left: auto;
@@ -94,7 +95,7 @@ a{
     text-align: center;
     color: #c7c3c4;
     margin: 0 auto 100px;
-    width: 500px;
+    max-width: 100%;
 }
 /* ! MAIN HEADING  */
 
@@ -122,7 +123,7 @@ header .container::after{
     background-color: #a7a7a7;
     width: calc(100% - 30px);
     height: 1.5px;
-    top:77px;
+    top:88px;
     left:15px;
 }
 
@@ -232,7 +233,7 @@ header .container nav .search i{
     padding: 50px 0 50px 80px;
 }
 
-@media (max-width:768px){
+@media (max-width:767px){
     .landing .info{
         width: 100%;
     }
@@ -275,7 +276,7 @@ header .container nav .search i{
     display:flex; 
 }
 
-.bullets li{
+.landing .bullets li{
     width: 10px;
     height: 10px;
     border: 2px white solid;
@@ -283,7 +284,7 @@ header .container nav .search i{
     margin-right: 5px;
 }
 
-.bullets  li.active{
+.landing .bullets  li.active{
     background-color: var(--maincolor);
     border-color: var(--maincolor);
 }
@@ -294,7 +295,7 @@ header .container nav .search i{
 .services{
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
-    background-color:#032f55;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -385,7 +386,7 @@ header .container nav .search i{
     margin-top: 50px;
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
-    background-color:#032f55;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -430,7 +431,6 @@ header .container nav .search i{
     margin-top: 50px;
 }
 .portfolio .img-container .box{
-    flex-basis: 25%;
     position: relative;
     overflow: hidden;
 }
@@ -487,5 +487,284 @@ header .container nav .search i{
     margin: 30px auto;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.more:hover{
+    background-color: white;
+    color: var(--maincolor);
 }
 /* *END PORTFOLIO */
+
+/* * START VIDEO SECTION */
+.video-section{
+    background-color: var(--transperant-color);
+    margin-top: 200px;
+    padding-top: 20px; /* Adjust as needed or set to 0 */
+        padding-bottom: 20px; /* Adjust as needed or set to 0 */
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+/* * END VIDEO SECTION */
+
+/* *START ABOUT US  */
+.about-us{
+    margin-top: 50px;
+    padding-top: var(--padding-top);
+    background-color: var(--blue);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.about-us img{
+    width: 50%;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+/* *END ABOUT US  */
+
+/* *START NUMBERS  */
+.number-component{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    text-align: center;
+}
+
+.number-component .container{
+    background-color: var(--transperant-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+    grid-column-gap: 10px;
+    color: white;
+}
+
+.number-component .box{
+    text-align: center;
+    padding: 50px;
+}
+
+.number-component .box i{
+    width:40px;
+    height: 40px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+/* *END NUMBERS */
+
+/* *START SKills  */
+.skills{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--blue);
+}
+
+.skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (min-width:992px){
+    .skills .container > div{
+        flex-basis:45%;
+    }
+}
+
+.skills .container > div > h2{
+    margin: 0 0 30px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+.skills .container > div > p{
+    color: #777;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skills img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.skills .TESTIMONIALS .content{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+@media (max-width:768px){
+    .skills .content{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skills .content img{
+        margin: 0 auto 20px;
+    }
+}
+
+.skills .TESTIMONIALS .content .info{
+    border-bottom: solid 2px var(--maincolor) ;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.8;
+}
+
+.skills .TESTIMONIALS .content .info p{
+    text-align: left;
+}
+
+.skills .TESTIMONIALS .content .info h4{
+    font-size: 14px;
+}
+
+.skills .TESTIMONIALS .bullets{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.skills .TESTIMONIALS .bullets li{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.skills .TESTIMONIALS .bullets li.active{
+    background-color: var(--maincolor);
+    border-color: var(--maincolor);
+}
+
+.skills .Our-Skills .prog-holder{
+    margin-bottom:15px;
+    color: white;
+}
+
+.skills .Our-Skills .prog-holder h3{
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.skills .Our-Skills .prog-holder .prog{
+    background-color: #dedadc;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.skills .Our-Skills .prog-holder .prog span{
+    display: block;
+    height: 100%;
+    border-radius: 30px;
+    background-color: var(--maincolor);
+    position: relative;
+}
+
+.skills .Our-Skills .prog-holder .prog span::before{
+    content: attr(data-progress);
+    position: absolute;
+    background-color:rgb(0 0 0/50%);
+    padding: 4px 8px;
+    top:-40px;
+    right: -18px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.skills .Our-Skills .prog-holder .prog span::after{
+    content: "";
+    /* width: 10px;
+    height: 10px; */
+    position:absolute;
+    border-width: 12px;
+    border-style: solid;
+    border-color:rgb(0 0 0/50%) transparent transparent transparent;
+    top: -14px;
+    right: -7px;
+}
+
+/* .one, 
+.two, 
+.three, 
+.four{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    margin-top:10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.one div, 
+.two div,
+.three div,
+.four div{
+    text-align: center;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--maincolor);
+} */
+
+
+/*
+
+
+
+.skills-component h3{
+    font-weight: normal;
+}
+
+.one div{
+    width: 95%;
+}
+
+.one div::after{
+    content: "93%";
+    width: 60px;
+    position: absolute;
+    height:30px;
+    background-color: rgb(0 0 0/60%);
+    top: -40px;
+    left:70%;
+}
+.two div{
+    width: 93%;
+}
+
+.three div{
+    width: 85%;
+}
+
+.four div{
+    width: 87%;
+} */
+/* *END SKills  */
