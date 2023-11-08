@@ -96,6 +96,7 @@ a{
     color: #c7c3c4;
     margin: 0 auto 100px;
     max-width: 100%;
+    margin-top: 10px;
 }
 /* ! MAIN HEADING  */
 
@@ -504,7 +505,7 @@ header .container nav .search i{
         padding-bottom: 20px; /* Adjust as needed or set to 0 */
 }
 
-.info{
+.video-section .info{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -712,59 +713,200 @@ h1 {
     right: -7px;
 }
 
-/* .one, 
-.two, 
-.three, 
-.four{
-    width: 100%;
-    height: 20px;
-    background-color: white;
-    margin-top:10px;
-    margin-bottom: 10px;
-    position: relative;
+/* *END SKills  */
+
+/**START  text */
+
+.text-container{
+    background-color: black;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    color: var(--maincolor);
+    text-align: center;
+}
+.text-container p:last-child{
+    padding-top: 10px;
 }
 
-.one div, 
-.two div,
-.three div,
-.four div{
+/**END  text */
+
+/* * START PRICING */
+.pricing{
+    background-color: var(--blue);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    color: white;
+}
+
+.pricing-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+}
+
+.content{ /*? PLANS*/
     text-align: center;
-    height: 100%;
-    z-index: -1;
-    background-color: var(--maincolor);
-} */
+}
 
+.content .price{ /*? head */
+    border-bottom: var(--maincolor) solid 1px;
+    border-top: var(--maincolor) solid 1px;
+    padding: 40px 20px;
+}
 
-/*
+.content .price h3{
+    font-weight: normal;
+    margin-bottom:20px ;
+}
 
+.content .price span {
+    font-size: 50px;
+    font-weight: bold;
+}
 
-
-.skills-component h3{
+.content .price span::before{
+    content: "$";
+    position: relative;
+    top: -35px;
+    left: -10px;
+    font-size: 15px;
     font-weight: normal;
 }
 
-.one div{
-    width: 95%;
+.content .price span::after{
+    content: "/MO";
+    position: relative;
+    font-size: 15px;
+    font-weight: normal;
+    left: 10px;
 }
 
-.one div::after{
-    content: "93%";
-    width: 60px;
+.pricing-container .content ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing-container .content li{
+    padding: 20px;
+    width: 80%;
+}
+
+.pricing-container .content li:not(:last-child){
+    position: relative;
+}
+
+.pricing-container .content li:not(:last-child)::after{
+    content: "";
     position: absolute;
-    height:30px;
-    background-color: rgb(0 0 0/60%);
-    top: -40px;
-    left:70%;
-}
-.two div{
-    width: 93%;
-}
-
-.three div{
-    width: 85%;
+    width: 70%;
+    height: 1px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--maincolor);
 }
 
-.four div{
-    width: 87%;
-} */
-/* *END SKills  */
+.pricing-container .content a{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--blue);
+    border-color: var(--maincolor);
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    transition: 0.4s;
+}
+
+.pricing-container .content a:hover{
+    background-color: var(--maincolor);
+}
+
+.pricing .test .contact-text{
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0 20px;
+}
+
+.pricing .contact-link{
+    padding: 10px 25px;
+    color: white;
+    border: var(--maincolor) 1px solid;
+    transition: 0.4s;
+    margin: 20px auto;
+}
+
+.pricing .contact-link:hover{
+    background-color: var(--maincolor);
+} 
+/* * END PRICING */
+
+/* * START CONTACT US */
+
+.subscribe{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    color: white;
+    /* text-align: center; */
+    position: relative;
+    /* background-color: var(--blue); */
+}
+
+.subscribe .container{
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 991px){
+    .subscribe .container{
+        flex-direction: column;
+    }
+}
+.subscribe .form{
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+}
+
+.subscribe .form i{
+
+}
+
+.subscribe form input[type="email"]{
+    border: 1px solid white;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--maincolor);
+    width: calc(100%-130px);
+}
+
+.subscribe form input[type="submit"]{
+    width: 130px;
+}
+/* * END CONTACT US */
+
+
+/* * START FOOTER */
+footer{
+    text-align: center;
+    padding-top:var(--padding-top);
+    color: white;
+    background-color: var(--blue);
+}
+
+footer .logo{
+    margin-bottom: 20px;
+}
+
+footer .info{
+    margin: 40px auto;
+    border-bottom:1px solid var(--maincolor) ;
+    width: fit-content;
+}
+
+footer .foot{
+    padding: 20px 0;
+}
+/* * END FOOTER */
+
