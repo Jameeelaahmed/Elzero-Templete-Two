@@ -145,7 +145,7 @@ header nav ul{
 
 header nav ul li a {
     display: block;
-    transition: 0.4s;
+    transition: 0.4s ease;
     padding: 30px 10px;
     font-size: 14px;
     color: white;
@@ -636,6 +636,8 @@ h1 {
     display: flex;
     align-items: flex-end;
     line-height: 1.8;
+    color: white;
+    padding-bottom:20px ;
 }
 
 .skills .TESTIMONIALS .content .info p{
@@ -821,18 +823,20 @@ h1 {
     background-color: var(--maincolor);
 }
 
-.pricing .test .contact-text{
+.pricing .contact-text{
     text-align: center;
     font-size: 25px;
-    margin: 50px 0 20px;
+    margin: 100px auto 20px;
 }
 
 .pricing .contact-link{
+    display: block;
     padding: 10px 25px;
     color: white;
     border: var(--maincolor) 1px solid;
     transition: 0.4s;
     margin: 20px auto;
+    width: fit-content;
 }
 
 .pricing .contact-link:hover{
@@ -840,19 +844,18 @@ h1 {
 } 
 /* * END PRICING */
 
-/* * START CONTACT US */
-
+/** START SUBSCRIBE  */
 .subscribe{
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
     color: white;
+    background-color: black;
     /* text-align: center; */
     position: relative;
     /* background-color: var(--blue); */
 }
 
 .subscribe .container{
-    position: absolute; 
     display: flex;
     justify-content: center;
 }
@@ -862,15 +865,21 @@ h1 {
         flex-direction: column;
     }
 }
-.subscribe .form{
+
+.subscribe form{
     display: flex;
     width: 500px;
     max-width: 100%;
     position: relative;
+    /* justify-content: center; */
 }
 
-.subscribe .form i{
-
+.subscribe form i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    /* background-color: #19c8fa; */
 }
 
 .subscribe form input[type="email"]{
@@ -879,20 +888,131 @@ h1 {
     padding: 20px 20px 20px 60px;
     caret-color: var(--maincolor);
     width: calc(100%-130px);
+    color: white;
+    border-right: none;
 }
 
 .subscribe form input[type="submit"]{
     width: 130px;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 15px;
+    border-left: none;
+    cursor: pointer;
 }
-/* * END CONTACT US */
 
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus{
+    outline: none;
+}
+
+.subscribe p{
+    line-height: 2;
+    /* margin-left: 20px; */
+}
+
+@media(max-width: 991px){
+    .subscribe p{
+        margin: 30px 0 0;
+    }
+}
+/** END SUBSCRIBE  */
+
+/* * START CONTACT US */
+.contact-us{
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--blue);
+    color: white;
+}
+
+.contact-us .contact-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:768px){
+    .contact-us .contact-container{
+        flex-direction: column;
+    }
+}
+
+.contact-us .contact-container form{
+    flex-basis: 70%;
+}
+
+.contact-us .contact-container form .main-input{
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 15px 40px;
+}
+
+.contact-us textarea.main-input{
+    height: 200px;
+}
+
+.contact-us form input[type="submit"]{
+    /* padding: 15px 40px; */
+    background-color: var(--maincolor);
+    color: white;
+    padding: 20px;
+    border: none;
+    display: flex;
+    margin-left:auto;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: bolder;
+}
+
+.contact-us form input[type="submit"]:hover{
+    background-color: white;
+    color: var(--maincolor);
+}
+
+.contact-us form input[type="text"]:focus,
+.contact-us form input[type="email"]:focus,
+.contact-us form input[type="submit"]:focus{
+    outline: none;
+}
+
+.contact-container .info{
+    flex-basis: 25%;
+}
+
+
+@media (max-width:768px){
+    .contact-container .info{
+        order: -1;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+.contact-us .contact-container .info h4{
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size:18px ;
+}
+
+.contact-us .contact-container .info p{
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.contact-us .contact-container .info .WWE h4{
+    margin-top: 60px;
+}
+
+/* * END CONTACT US */
 
 /* * START FOOTER */
 footer{
     text-align: center;
     padding-top:var(--padding-top);
     color: white;
-    background-color: var(--blue);
+    background-color: black;
 }
 
 footer .logo{
@@ -901,12 +1021,31 @@ footer .logo{
 
 footer .info{
     margin: 40px auto;
-    border-bottom:1px solid var(--maincolor) ;
     width: fit-content;
+}
+
+
+footer .info p{
+    border-bottom:1px solid var(--maincolor) ;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+footer .icons{
+    margin-left: 40px;
+}
+
+footer .icons i{
+    margin-right: 50px;
+    
 }
 
 footer .foot{
     padding: 20px 0;
+}
+
+footer .foot span{
+    color: var(--maincolor);
 }
 /* * END FOOTER */
 
